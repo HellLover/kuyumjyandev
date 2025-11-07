@@ -16,22 +16,25 @@ export class Assets {
     static windows = images + "/windows.png";
     static expressjs = images + "/express-js.png";
     static github = images + "/github.png";
+
+    static previewDolphin = "/dolphin.png";
+    static previewPortfolio = "/portfolio.png"
 }
 
 export const projects = [
-    {
-        name: "Portfolio",
-        description: "My personal portfolio website",
-        tech: ["React", "Tailwind CSS", "TypeScript", "Vite"],
-        url: "",
-        image: "https://i.imgur.com/UU3yA9X.png"
-    },
     {
         name: "Dolphin Bot",
         description: "A versatile Discord bot with a sleek web dashboard that simplifies server management!",
         tech: ["React", "Next", "TypeScript", "discord.js", "ChakraUI"],
         url: "https://dolphinbot.fun",
-        image: "https://i.imgur.com/Wz3OQJn.jpeg"
+        image: Assets.previewDolphin
+    },
+    {
+        name: "Portfolio",
+        description: "My personal portfolio website",
+        tech: ["React", "Tailwind CSS", "TypeScript", "Vite"],
+        url: "https://kuyumjyandev.vercel.app",
+        image: Assets.previewPortfolio
     }
 ]
 

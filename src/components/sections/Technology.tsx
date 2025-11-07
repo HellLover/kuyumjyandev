@@ -8,7 +8,7 @@ const Technology: React.FC = () => {
     return (
         <Hero>
             <RevealOnScroll>
-                <div className="border-1 border-gray-900 p-10 rounded-md shadow-md inset-shadow-gray-900">
+                <div className="border-1 border-gray-900 rounded-md shadow-md inset-shadow-gray-900">
                     <h1 className="text-4xl text-blue-600 font-bold text-center mb-5">Technologies I Use</h1>
                     <div className="w-full pt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         <TechnologyItem name="React" icon={Assets.react} type="UI Framework" />
