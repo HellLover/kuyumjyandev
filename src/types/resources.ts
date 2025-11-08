@@ -25,7 +25,7 @@ export const projects = [
     {
         name: "Dolphin Bot",
         description: "A versatile Discord bot with a sleek web dashboard that simplifies server management!",
-        tech: ["React", "Next", "TypeScript", "discord.js", "ChakraUI"],
+        tech: ["React", "Next", "TypeScript", "discord.js", "Tailwind CSS"],
         url: "https://dolphinbot.fun",
         image: Assets.previewDolphin
     },

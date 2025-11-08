@@ -20,10 +20,10 @@ const Projects = () => {
                                         />
                                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                                     </div>
-                                    <div className="w-full flex flex-col gap-3 p-4">
+                                    <div className="w-full flex flex-col gap-3 p-4 mt-auto">
                                         <p className="text-2xl">{project.name}</p>
                                         <p className="text-lg text-gray-400">{project.description}</p>
-                                        <div className='flex flex-wrap gap-2 mb-4'>
+                                        <div className='flex flex-wrap gap-2 mb-4 mx-auto'>
                                             {project.tech.map((t, idx) => {
                                                 return (
                                                     <span
