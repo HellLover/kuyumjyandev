@@ -17,8 +17,8 @@ export class Assets {
     static expressjs = images + "/express-js.png";
     static github = images + "/github.png";
 
-    static previewDolphin = "/dolphin.png";
-    static previewPortfolio = "/portfolio.png"
+    static previewDolphin = "/dolphin_preview.png";
+    static previewPortfolio = "/portfolio_preview.png"
 }
 
 export const projects = [
