@@ -7,6 +7,7 @@ import { LoadingScreen } from "./components/ui/LoadingScreen";
 import Projects from "./components/sections/Projects";
 import Footer from "./components/ui/Footer";
 import Toast from "./components/ui/Toast";
+import AboutMe from "./components/sections/AboutMe";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,19 +36,20 @@ function App() {
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
       <div
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        } bg-gray-900 text-gray-100`}
+        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
+          } bg-gray-900 text-gray-100 font-sans`}
       >
-          <Navbar />
-          <Home />
-          <hr className="bg-gray-900 opacity-20" />
-          <Technology />
-          <hr className="bg-gray-900 opacity-20" />
-          <Projects />
-          <Footer />
+        <Navbar />
+        <Home />
+        <hr className="bg-gray-900 opacity-20" />
+        <Technology />
+        <hr className="bg-gray-900 opacity-20" />
+        <AboutMe />
+        <hr className="bg-gray-900 opacity-20" />
+        <Projects />
+        <Footer />
 
-          <Toast show={showToast} onClick={scrollToTop} />
+        <Toast show={showToast} onClick={scrollToTop} />
       </div>
     </>
   )

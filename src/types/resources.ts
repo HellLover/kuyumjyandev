@@ -33,7 +33,7 @@ export const projects = [
         name: "Portfolio",
         description: "My personal portfolio website",
         tech: ["React", "Tailwind CSS", "TypeScript", "Vite"],
-        url: "https://kuyumjyandev.vercel.app",
+        url: "https://kuyumjyan.xyz",
         image: Assets.previewPortfolio
     }
 ]
