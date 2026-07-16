@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                     &copy; 2025 | Made by
                     <span className='bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent'> Kuyumjyan</span>
                 </p>
-                <p className='text-sm'>Last built at {sugar.Date.format(new Date())}</p>
+                <p className='text-sm'>Last built at {sugar.Date.format(new Date(__BUILD_TIME__))}</p>
                 <div className='flex row gap-2 content-center justify-center mt-2'>
                     <a href={socials.github} target='_blank' rel='noreferrer' className='transform hover:text-violet-200'>
                         <AiFillGithub size={24} />
