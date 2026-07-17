@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Navbar = () => {
     return (
-        <nav className="sticky top-0 bg-transparent backdrop-blur-md p-4 z-50">
+        <nav className="sticky top-0 bg-transparent backdrop-blur-md p-4 z-50 font-mono">
             <div className="max-w-2xl mx-auto flex justify-between items-center border-1 border-gray-800 bg-gray-800 rounded-full p-4 shadow-sm shadow-gray-900">
                 <div className='ml-4 text-white font-bold text-xl pointer-events-none'>
                     <span className='bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent'>kuyumjyan</span>

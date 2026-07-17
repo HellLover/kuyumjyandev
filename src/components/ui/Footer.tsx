@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
         <footer id='footer'>
             <hr className='text-gray-500' />
 
-            <div className="text-center py-4">
+            <div className="text-center py-4 font-mono">
                 <p className='mb-2'>
-                    &copy; 2025 | Made by
+                    &copy; {new Date().getFullYear()} | Made by
                     <span className='bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent'> Kuyumjyan</span>
                 </p>
                 <p className='text-sm'>Last built at {sugar.Date.format(new Date(__BUILD_TIME__))}</p>

@@ -7,11 +7,11 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', onClick }) => {
-    const baseStyles = 'px-4 py-2 rounded focus:outline-none cursor-pointer';
+    const baseStyles = 'px-4 py-2 rounded-md focus:outline-none cursor-pointer';
     const variantStyles = {
-        primary: 'bg-blue-600 text-white hover:bg-blue-700 font-bold py-3 px-6 rounded-full transition duration-300 text-xl',
-        outline: 'bg-none hover:text-blue-600 border-1 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-xl',
-        secondary: 'bg-gray-600 text-white hover:bg-gray-700 font-bold py-3 px-6 rounded-full transition duration-300 text-xl',
+        primary: 'bg-blue-600 text-white hover:bg-blue-600/80 font-bold py-3 px-6 transition duration-300 text-xl',
+        outline: 'bg-none border-1 border border-zinc-600 hover:bg-gray-800/80 text-white font-bold py-3 px-6 transition duration-300 text-xl',
+        secondary: 'bg-gray-600 text-white hover:bg-gray-700 font-bold py-3 px-6 transition duration-300 text-xl',
     };
 
     return (

@@ -23,9 +23,9 @@ export class Assets {
 
 export const projects = [
     {
-        name: "Dolphin Bot",
+        name: "Dolphin",
         description: "A versatile Discord bot with a sleek web dashboard that simplifies server management!",
-        tech: ["React", "Next", "TypeScript", "discord.js", "Tailwind CSS"],
+        tech: ["React", "Next.js", "TypeScript", "discord.js", "Tailwind CSS"],
         url: "https://dolphinbot.fun",
         image: Assets.previewDolphin
     },

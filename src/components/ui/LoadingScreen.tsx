@@ -1,7 +1,7 @@
 import { useEffect, useState, FC } from "react";
 
 type Props = {
-    onComplete: () => void;
+  onComplete: () => void;
 };
 
 export const LoadingScreen: FC<Props> = ({ onComplete }) => {

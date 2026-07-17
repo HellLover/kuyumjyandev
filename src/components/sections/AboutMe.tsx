@@ -22,7 +22,7 @@ const timelineData = [
     },
     {
         id: 4,
-        year: '2025',
+        year: '2025 - now',
         title: 'Building the Future',
         description: 'Just returned from the army and am now focused on building innovative web applications and contributing to open-source projects.',
     },
@@ -31,7 +31,7 @@ const timelineData = [
 export default function AboutMe() {
     return (
         <RevealOnScroll>
-            <section className="px-4 py-16 md:px-8 lg:px-16 bg-gray-800/90 font-sans">
+            <section className="px-4 py-16 md:px-8 lg:px-16 bg-gray-800/90 font-mono">
                 <div className="mx-auto max-w-5xl">
                     {/* Header */}
                     <div className="mb-16 space-y-4">

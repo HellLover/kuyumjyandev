@@ -6,7 +6,7 @@ const Projects = () => {
     return (
         <Hero>
             <RevealOnScroll>
-                <div id='projects' className="border-1 border-gray-900 p-10 rounded-md">
+                <div id='projects' className="border-1 border-gray-900 p-4 rounded-md font-mono">
                     <h1 className="text-4xl text-blue-600 font-bold text-center mb-5">My Recent Projects</h1>
                     <div className='w-full pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4'>
                         {projects.map((project, idx) => {
@@ -28,7 +28,7 @@ const Projects = () => {
                                                 return (
                                                     <span
                                                         key={`tech-${idx}`}
-                                                        className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                                                        className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-md text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
                                                     >{t}</span>
                                                 )
                                             })}
