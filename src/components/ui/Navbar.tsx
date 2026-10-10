@@ -1,23 +1,41 @@
 import { socials } from "../../types/resources";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
+const links = [
+    { label: "About", href: "#about" },
+    { label: "Stack", href: "#stack" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+];
+
 const Navbar = () => {
     return (
-        <nav className="sticky top-0 bg-transparent backdrop-blur-md p-4 z-50 font-mono">
-            <div className="max-w-2xl mx-auto flex justify-between items-center border-1 border-gray-800 bg-gray-800 rounded-full p-4 shadow-sm shadow-gray-900">
-                <div className='ml-4 text-white font-bold text-xl pointer-events-none'>
-                    <span className='bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent'>kuyumjyan</span>
-                </div>
-                <div className='flex row gap-2 content-center justify-center mr-5'>
-                    <a href={socials.github} target='_blank' rel='noreferrer' className='transform hover:text-violet-200'>
-                        <AiFillGithub size={26} />
+        <header className="sticky top-0 z-40 border-b border-zinc-800/60 bg-zinc-950/70 backdrop-blur-md">
+            <nav className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
+                <a href="#top" className="font-mono text-sm text-zinc-100">
+                    kuyumjyan<span className="text-blue-400">.</span>
+                </a>
+
+                <ul className="hidden items-center gap-7 font-mono text-xs text-zinc-400 sm:flex">
+                    {links.map((l) => (
+                        <li key={l.href}>
+                            <a href={l.href} className="transition-colors hover:text-zinc-50">
+                                {l.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+
+                <div className="flex items-center gap-3 text-zinc-400">
+                    <a href={socials.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-zinc-50">
+                        <AiFillGithub size={20} />
                     </a>
-                    <a href={socials.linkedin} target='_blank' rel='noreferrer' className='transform hover:text-violet-200'>
-                        <AiFillLinkedin size={26} />
+                    <a href={socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-zinc-50">
+                        <AiFillLinkedin size={20} />
                     </a>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
     );
 };
 

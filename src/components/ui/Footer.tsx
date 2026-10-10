@@ -1,27 +1,12 @@
 import React from 'react';
 import sugar from 'sugar';
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { socials } from '../../types/resources';
 
 const Footer: React.FC = () => {
     return (
-        <footer id='footer'>
-            <hr className='text-gray-500' />
-
-            <div className="text-center py-4 font-mono">
-                <p className='mb-2'>
-                    &copy; {new Date().getFullYear()} | Made by
-                    <span className='bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent'> Kuyumjyan</span>
-                </p>
-                <p className='text-sm'>Last built at {sugar.Date.format(new Date(__BUILD_TIME__))}</p>
-                <div className='flex row gap-2 content-center justify-center mt-2'>
-                    <a href={socials.github} target='_blank' rel='noreferrer' className='transform hover:text-violet-200'>
-                        <AiFillGithub size={24} />
-                    </a>
-                    <a href={socials.linkedin} target='_blank' rel='noreferrer' className='transform hover:text-violet-200'>
-                        <AiFillLinkedin size={24} />
-                    </a>
-                </div>
+        <footer id="footer" className="border-t border-zinc-800/70">
+            <div className="mx-auto flex max-w-4xl flex-col gap-1 px-6 py-8 font-mono text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+                <p>&copy; {new Date().getFullYear()} Samvel Kuyumjyan</p>
+                <p>Last built at {sugar.Date.format(new Date(__BUILD_TIME__))}</p>
             </div>
         </footer>
     );

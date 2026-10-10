@@ -19,21 +19,22 @@ export const LoadingScreen: FC<Props> = ({ onComplete }) => {
 
         setTimeout(() => {
           onComplete();
-        }, 1000);
+        }, 700);
       }
-    }, 100);
+    }, 90);
 
     return () => clearInterval(interval);
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-gray-900 text-gray-100 flex flex-col items-center justify-center">
-      <div className="mb-4 text-4xl font-mono font-bold">
-        {text} <span className="animate-blink ml-1"> | </span>
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-950 text-zinc-100">
+      <div className="mb-5 font-mono text-3xl font-medium">
+        {text}
+        <span className="animate-blink ml-1 text-blue-400">|</span>
       </div>
 
-      <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">
-        <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
+      <div className="relative h-px w-[180px] overflow-hidden bg-zinc-800">
+        <div className="animate-loading-bar h-full w-[40%] bg-blue-400" />
       </div>
     </div>
   );

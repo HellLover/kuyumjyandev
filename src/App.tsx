@@ -1,35 +1,35 @@
-import Technology from "./components/sections/Technology";
-import Navbar from './components/ui/Navbar';
-import Home from "./components/sections/Home";
-
 import { useState } from "react";
 import { LoadingScreen } from "./components/ui/LoadingScreen";
-import Projects from "./components/sections/Projects";
+import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
+import Home from "./components/sections/Home";
 import AboutMe from "./components/sections/AboutMe";
+import Technology from "./components/sections/Technology";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
-        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
-          } bg-gray-900 text-gray-100 font-sans`}
+        className={`min-h-screen font-sans text-zinc-300 antialiased transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
+          }`}
       >
         <Navbar />
-        <Home />
-        <hr className="bg-gray-900 opacity-20" />
-        <Technology />
-        <hr className="bg-gray-900 opacity-20" />
-        <AboutMe />
-        <hr className="bg-gray-900 opacity-20" />
-        <Projects />
+        <main className="mx-auto max-w-4xl px-6">
+          <Home />
+          <AboutMe />
+          <Technology />
+          <Projects />
+          <Contact />
+        </main>
         <Footer />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,27 +1,30 @@
-import React from 'react';
+import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
 interface ButtonProps {
     children: React.ReactNode;
-    variant?: 'primary' | 'outline' | 'secondary';
-    onClick?: () => void;
+    href: string;
+    variant?: "primary" | "outline";
+    external?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', onClick }) => {
-    const baseStyles = 'px-4 py-2 rounded-md focus:outline-none cursor-pointer';
-    const variantStyles = {
-        primary: 'bg-blue-600 text-white hover:bg-blue-600/80 font-bold py-3 px-6 transition duration-300 text-xl',
-        outline: 'bg-none border-1 border border-zinc-600 hover:bg-gray-800/80 text-white font-bold py-3 px-6 transition duration-300 text-xl',
-        secondary: 'bg-gray-600 text-white hover:bg-gray-700 font-bold py-3 px-6 transition duration-300 text-xl',
-    };
+const base =
+    "inline-flex items-center gap-1.5 rounded-md px-4 py-2.5 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400";
 
-    return (
-        <button
-            className={`${baseStyles} ${variantStyles[variant]}`}
-            onClick={onClick}
-        >
-            {children}
-        </button>
-    );
+const variants = {
+    primary: "bg-zinc-100 text-zinc-950 hover:bg-white",
+    outline: "border border-zinc-700 text-zinc-200 hover:border-zinc-500 hover:text-white",
 };
+
+const Button: React.FC<ButtonProps> = ({ children, href, variant = "primary", external = false }) => (
+    <a
+        href={href}
+        className={`${base} ${variants[variant]}`}
+        {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+    >
+        {children}
+        {external && <ArrowUpRight size={15} />}
+    </a>
+);
 
 export default Button;
