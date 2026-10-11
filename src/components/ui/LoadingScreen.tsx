@@ -32,10 +32,6 @@ export const LoadingScreen: FC<Props> = ({ onComplete }) => {
         {text}
         <span className="animate-blink ml-1 text-blue-400">|</span>
       </div>
-
-      <div className="relative h-px w-[180px] overflow-hidden bg-zinc-800">
-        <div className="animate-loading-bar h-full w-[40%] bg-blue-400" />
-      </div>
     </div>
   );
 };
