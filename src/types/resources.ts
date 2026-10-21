@@ -26,7 +26,7 @@ export const projects = [
         name: "Dolphin",
         description: "A versatile Discord bot with a sleek web dashboard that simplifies server management!",
         tech: ["React", "Next.js", "TypeScript", "discord.js", "Tailwind CSS"],
-        url: "https://dolphinbot.fun",
+        url: "https://dolphinbot.vercel.app",
         image: Assets.previewDolphin
     },
     {
